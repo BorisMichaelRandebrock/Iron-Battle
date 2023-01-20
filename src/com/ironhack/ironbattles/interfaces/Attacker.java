@@ -1,4 +1,4 @@
-package com.ironhack.ironbattles.main.interfaces;
+package com.ironhack.ironbattles.interfaces;
 
 public interface Attacker {
    void attack(Character character);
