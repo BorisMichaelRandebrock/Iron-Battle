@@ -29,10 +29,9 @@ public class Wizzard extends Character implements Attacker {
             this.intelligence = intelligence;
         }
 
-
     @Override
     public void attack(java.lang.Character character) {
-
+        int attack = 0;
     }
 }
 
