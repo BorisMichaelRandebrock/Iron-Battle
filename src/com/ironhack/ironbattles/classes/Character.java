@@ -11,6 +11,10 @@ abstract class Character {
         this.hp = hp;
     }
 
+    public Character() {
+
+    }
+
     public String getId() {
         return id;
     }
