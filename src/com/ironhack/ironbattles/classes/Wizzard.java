@@ -12,6 +12,31 @@ public class Wizzard extends Character implements Attacker {
             this.intelligence = intelligence;
         }
 
+        public Wizzard(String name, int hp, int mana, int intelligence) {
+        super();
+        this.mana = mana;
+        this.intelligence = intelligence;
+    }
+
+    public void attack(java.lang.Character character) {
+        int attack = 0;
+        int randomNumberAttack = (int) (Math.random() * ((10 - 1) + 1));
+        if (this.mana > 5) {
+            if (randomNumberAttack % 2 == 0) {
+                attack = this.intelligence;
+                this.mana -= 5;
+                System.out.println();
+            } else {
+                attack = this.intelligence / 2;
+                this.mana += 1;
+            }
+        } else if (this.mana > 2) {
+            attack = this.intelligence / 2;
+            this.mana += 1;
+        } else {
+            this.mana += 2;
+        }
+    }
 
         public int getMana() {
             return mana;
@@ -29,10 +54,7 @@ public class Wizzard extends Character implements Attacker {
             this.intelligence = intelligence;
         }
 
-    @Override
-    public void attack(java.lang.Character character) {
-        int attack = 0;
-    }
+
 }
 
 
