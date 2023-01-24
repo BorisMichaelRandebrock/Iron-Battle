@@ -15,6 +15,10 @@ public abstract class Character {
 
     }
 
+    public void attack(Character character) {
+
+    }
+
     public String getId() {
         return id;
     }

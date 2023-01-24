@@ -29,21 +29,22 @@ public class Warrior extends Character implements Attacker {
 
     public void attack(java.lang.Character character) {
         int attack = 0;
-        int randomNumberAttack = (int) (Math.random()*((10-1)+1));
-        if (this.stamina > 5){
-            if (randomNumberAttack %2==0){
+        int randomNumberAttack = (int) (Math.random() * ((10 - 1) + 1));
+        if (this.stamina > 5) {
+            if (randomNumberAttack % 2 == 0) {
                 attack = this.strength;
-                this.stamina -=5;
+                this.stamina -= 5;
                 System.out.println();
-            }else{
-                attack = this.strength /2;
-                this.stamina +=1;
+            } else {
+                attack = this.strength / 2;
+                this.stamina += 1;
             }
-        } else if (this.stamina>2) {
-            attack = this.strength /2;
-            this.stamina +=1;
-        }else{
-            this.stamina +=2;
+        } else if (this.stamina > 2) {
+            attack = this.strength / 2;
+            this.stamina += 1;
+        } else {
+            this.stamina += 2;
         }
     }
-}
+    }
+
