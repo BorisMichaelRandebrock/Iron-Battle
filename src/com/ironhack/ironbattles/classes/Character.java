@@ -1,6 +1,6 @@
 package com.ironhack.ironbattles.classes;
 
-abstract class Character {
+public abstract class Character {
     private String id;
     private String name;
     private int hp;
