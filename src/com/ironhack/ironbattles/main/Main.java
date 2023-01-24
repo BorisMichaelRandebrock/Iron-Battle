@@ -6,6 +6,7 @@ public class Main {
     public static void main(String[] args) {
         System.out.println("You killed my father....");
         System.out.println("....prepare to die 😇");
+
     }
 
     public static void checkHealth(Character player1, Character player2){
@@ -17,5 +18,12 @@ public class Main {
             System.out.println("Its a tie");
         }
     }
-
+    public static void battleMethod(Character player1, Character player2){
+        while(player1.getHp()> 0 && player2.getHp()>0){
+            player1.attack(player2);
+            player2.attack(player1);
+            System.out.println("Next Round!!");
+        }
+        checkHealth(player1, player2);
+    }
 }
