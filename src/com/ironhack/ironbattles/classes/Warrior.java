@@ -15,19 +15,19 @@ public class Warrior extends Character implements Attacker {
             if (randomNumberAttack % 2 == 0) {
                 character.setHp(character.getHp()-this.strength);
                 this.stamina -= 5;
-                System.out.println(getName()+ " said: have a taste of my sword ⚔️");
+                System.out.println(getName() + ":\u001B[31m have a taste of my sword\u001B[0m ⚔️");
             } else {
                 character.setHp(character.getHp()-this.strength/2);
                 this.stamina += 1;
-                System.out.println(getName()+ " said: take this kick \uD83E\uDDB6");
+                System.out.println(getName() + ":\u001B[31m take this kick\u001B[0m \uD83E\uDDB6");
             }
         } else if (this.stamina > 2) {
             character.setHp(character.getHp()-this.strength/2);
             this.stamina += 1;
-            System.out.println(getName()+ " said: take this punch \uD83E\uDD1B");
+            System.out.println(getName() + ":\u001B[31m take this punch\u001B[0m \uD83E\uDD1B");
         } else {
             this.stamina += 2;
-            System.out.println(getName()+ " said: do you think you can defeat me?");
+            System.out.println(getName() + ":\u001B[31m do you think you can defeat me?\u001B[0m");
         }
     }
 

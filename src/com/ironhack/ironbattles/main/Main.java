@@ -9,10 +9,10 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
 
-        Character player1= new Warrior("Aragorn");
+        /*Character player1= new Warrior("Aragorn");
         Character player2= new Wizzard("Saruman");
-        System.out.println(player1.getName() + " You killed my father....");
-        System.out.println(player2.getName() + " ....prepare to die 😇");
+        System.out.println(player1.getName() + ": You killed my father....");
+        System.out.println(player2.getName() + ": ....prepare to die 😇");*/
 
 //      battleMethod(player1,player2); // method to run battle with characters defined in code (above)
         createCharacters(); // method to let user create characters
@@ -83,7 +83,10 @@ public class Main {
                         "\n So... once again... wanna start this bloody fight? Yes or Yes?");
                 battleStarts = scanner.nextLine();
             }
-            switch (battleStarts.toLowerCase()){
+        System.out.println(player1Character.getName() + ": You killed my father.... 💀");
+        System.out.println(player2Character.getName() + ": ....prepare to die 🪦😇");
+
+        switch (battleStarts.toLowerCase()){
                 case "yes": // battle starts
                     battleMethod(player1Character,player2Character);
                     break;
@@ -95,11 +98,11 @@ public class Main {
     }
     public static void checkHealth(Character player1, Character player2){
         if (player1.getHp()<=0 && player2.getHp()>0){
-            System.out.println(player2.getName() + " hahaha you weak little bastard!\n" +  player1.getName() + " i am dying");
+            System.out.println(player2.getName() + "\u001B[31m hahaha you weak little bastard!\u001B[0m \n" +  player1.getName() + "\u001B[31m aaaargh...  i am dying\u001B 👼🏻");
         } else if (player2.getHp()<=0 && player1.getHp()>0){
-            System.out.println(player1.getName() + " i told you! i would win!!!! \n" +  player2.getName() + " i am dying");
+            System.out.println(player1.getName() + "\u001B[31m i told you! i would win!!!! \u001B[0m \n" +  player2.getName() + "\u001B[31m aaaargh...  i am dying\u001B 👼🏻");
         }  else{
-            System.out.println("Its a tie");
+            System.out.println("\u001B[31m I Think we had enough... lets go for a beer ...\u001B🍻");
         }
     }
     public static void battleMethod(Character player1, Character player2){
