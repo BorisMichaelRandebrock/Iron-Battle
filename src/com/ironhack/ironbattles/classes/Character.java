@@ -1,22 +1,20 @@
 package com.ironhack.ironbattles.classes;
 
-public abstract class Character {
-    private String id;
+import com.ironhack.ironbattles.interfaces.Attacker;
+
+public abstract class Character implements Attacker {
+    private String id=(String)"Character"+(Math.random()*999+1);
     private String name;
     private int hp;
     private boolean isAlive = true;
 
     public Character(String name, int hp) {
         this.name = name;
-        this.hp = hp;
-    }
-
-    public Character() {
-
+        this.hp= hp;
     }
 
     public void attack(Character character) {
-
+        System.out.println("No te esperes caricias");
     }
 
     public String getId() {
@@ -24,7 +22,6 @@ public abstract class Character {
     }
 
     public void setId(String id) {
-
         this.id = id;
     }
 

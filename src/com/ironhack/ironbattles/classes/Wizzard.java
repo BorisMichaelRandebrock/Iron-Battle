@@ -1,40 +1,35 @@
 package com.ironhack.ironbattles.classes;
-
 import com.ironhack.ironbattles.interfaces.Attacker;
+import com.ironhack.ironbattles.classes.Character;
 
 public class Wizzard extends Character implements Attacker {
-        private int mana= (int)(Math.random()*10+1);
-        private int intelligence = (int)(Math.random()*(50-1)+1);
+        private int mana= (int)(Math.random()*50+10);
+        private int intelligence = (int)(Math.random()*50+1);
 
-        public Wizzard(int mana, int intelligence) {
-            super();
-            this.mana = mana;
-            this.intelligence = intelligence;
+        public Wizzard(String name) {
+            super(name, (int)(Math.random()*100+50));
         }
 
-        public Wizzard(String name, int hp, int mana, int intelligence) {
-        super();
-        this.mana = mana;
-        this.intelligence = intelligence;
-    }
-
-    public void attack(java.lang.Character character) {
-        int attack = 0;
+        @Override
+        public void attack(Character character) {
         int randomNumberAttack = (int) (Math.random() * ((10 - 1) + 1));
         if (this.mana > 5) {
             if (randomNumberAttack % 2 == 0) {
-                attack = this.intelligence;
+                character.setHp(character.getHp()-this.intelligence);
                 this.mana -= 5;
-                System.out.println();
+                System.out.println(getName()+ " said: take this fireball ☄️");
             } else {
-                attack = this.intelligence / 2;
+                character.setHp(character.getHp()-this.intelligence/2);
                 this.mana += 1;
+                System.out.println(getName()+ " said: take this hit with my staff \uD83E\uDE84");
             }
         } else if (this.mana > 2) {
-            attack = this.intelligence / 2;
+            character.setHp(character.getHp()-this.intelligence/2);
             this.mana += 1;
+            System.out.println(getName()+ " said: get this rock!! \uD83E\uDEA8 ");
         } else {
             this.mana += 2;
+            System.out.println(getName()+ " said: where are you? you can run but you can't hide!!");
         }
     }
 
@@ -53,8 +48,6 @@ public class Wizzard extends Character implements Attacker {
         public void setIntelligence(int intelligence) {
             this.intelligence = intelligence;
         }
-
-
 }
 
 
