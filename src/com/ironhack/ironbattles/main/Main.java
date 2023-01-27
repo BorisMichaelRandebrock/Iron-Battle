@@ -26,7 +26,7 @@ public class Main {
         // sword and warrior stands for warrior class
         // staff and wizard stands for wizard class
         // any other words will make the system ask again to user
-        System.out.println("Aha... It's dangerous without a weapon... what will " +player1Name + " you choose? \n" +
+        System.out.println("Aha... It's dangerous without a weapon... what will be your choice of weapon for " +player1Name + "? \n" +
                 "if you are a Warrior please answer: 'sword' or 'warrior',\nif you are a Wizard, please enter: 'staff' or 'wizard`." );
         String player1Class = scanner.nextLine(); // getting data written from user (weapon or class)
         // this returns user to write properly the class or the weapon if user fails. it is not case-sensitive
