@@ -7,7 +7,7 @@ import com.ironhack.ironbattles.classes.Wizzard;
 import java.util.Scanner;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
 
         /*Character player1= new Warrior("Aragorn");
         Character player2= new Wizzard("Saruman");
@@ -17,7 +17,7 @@ public class Main {
 //      battleMethod(player1,player2); // method to run battle with characters defined in code (above)
         createCharacters(); // method to let user create characters
     }
-    public static void createCharacters(){ // function to create characters through menu
+    public static void createCharacters() throws InterruptedException { // function to create characters through menu
         Character player1Character = null; // set character to null just to initialize variables
         Character player2Character = null;
         Scanner scanner = new Scanner(System.in); // opening scanner to get info from user
@@ -83,8 +83,12 @@ public class Main {
                         "\n So... once again... wanna start this bloody fight? Yes or Yes?");
                 battleStarts = scanner.nextLine();
             }
+
         System.out.println(player1Character.getName() + ": You killed my father.... 💀");
+        Thread.sleep(500);
+
         System.out.println(player2Character.getName() + ": ....prepare to die 🪦😇");
+        Thread.sleep(500);
 
         switch (battleStarts.toLowerCase()){
                 case "yes": // battle starts
@@ -105,10 +109,13 @@ public class Main {
             System.out.println("\u001B[31m I Think we had enough... lets go for a beer ...\u001B🍻");
         }
     }
-    public static void battleMethod(Character player1, Character player2){
+    public static void battleMethod(Character player1, Character player2) throws InterruptedException {
         while(player1.getHp()> 0 && player2.getHp()>0){
+            Thread.sleep(500);
             player1.attack(player2);
+            Thread.sleep(500);
             player2.attack(player1);
+            Thread.sleep(500);
             System.out.println("what a bloody round. It left our opponents with: \n" + player1.getName() + ": " + player1.getHp() +
                     "\n" + player2.getName() + ": " + player2.getHp());
             System.out.println("\u001B[33m ===================================================== \u001B[0m");
