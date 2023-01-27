@@ -9,12 +9,8 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) throws InterruptedException {
 
-        /*Character player1= new Warrior("Aragorn");
-        Character player2= new Wizzard("Saruman");
-        System.out.println(player1.getName() + ": You killed my father....");
-        System.out.println(player2.getName() + ": ....prepare to die 😇");*/
 
-//      battleMethod(player1,player2); // method to run battle with characters defined in code (above)
+
         createCharacters(); // method to let user create characters
     }
     public static void createCharacters() throws InterruptedException { // function to create characters through menu
@@ -23,15 +19,15 @@ public class Main {
         Scanner scanner = new Scanner(System.in); // opening scanner to get info from user
 
         System.out.println( //printing in console the welcoming and asking for player 1 name (character name)
-                "Welcome to Iron battle Simulator!\n \n Are you ready to get your friends fight for you? \n \n" +
-                "so... tell me, what will be the name of the first fighter?");
+                "Welcome to Iron battle Simulator!\n \nAre you ready to get your friends fight for you? \n \n" +
+                "so... tell me, what will be the name of your first fighter?");
         String player1Name = scanner.nextLine(); // opening scanner to get the name which user give us. no filter added
         // then print message to console to ask user for player 1 class
         // sword and warrior stands for warrior class
         // staff and wizard stands for wizard class
         // any other words will make the system ask again to user
-        System.out.println("Aha... It's dangerous to go alone... what will " +player1Name + " take? \n" +
-                "a sword? (Warrior) \na magic staff? (Wizard)" );
+        System.out.println("Aha... It's dangerous without a weapon... what will " +player1Name + " you choose? \n" +
+                "if you are a Warrior please answer: 'sword' or 'warrior',\nif you are a Wizard, please enter: 'staff' or 'wizard`." );
         String player1Class = scanner.nextLine(); // getting data written from user (weapon or class)
         // this returns user to write properly the class or the weapon if user fails. it is not case-sensitive
         while (!player1Class.equalsIgnoreCase("sword") &&
@@ -51,7 +47,7 @@ public class Main {
             player1Character = new Wizzard(player1Name);
         }
         // asking for player 2 character. same code different variables and dialogs.
-        System.out.println("Ok, got it \nBut what about your other's friend name?" ); // ask user for name
+        System.out.println("Ok, got it \nBut what about your opponents name?" ); // ask user for name
         String player2Name = scanner.nextLine(); // getting the name written
         System.out.println("Oh... yeah... Should have expect that...\n" + // print dialog and ask user for player 2 class/weapon
                 "what about the weapon "+ player2Name +" will choose?");
