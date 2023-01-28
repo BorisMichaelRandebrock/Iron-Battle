@@ -17,19 +17,19 @@ public class Wizzard extends Character implements Attacker {
             if (randomNumberAttack % 2 == 0) {
                 character.setHp(character.getHp()-this.intelligence);
                 this.mana -= 5;
-                System.out.println(getName()+ ":\u001B[31m take this fireball \u001B[0m☄️");
+                System.out.println("\u001B[35m" + getName() + "\u001B[0m" + ":\u001B[31m take this fireball \u001B[0m☄️");
             } else {
                 character.setHp(character.getHp()-this.intelligence/2);
                 this.mana += 1;
-                System.out.println(getName()+ ":\u001B[31m take this hit with my staff\u001B[0m \uD83E\uDE84");
+                System.out.println("\u001B[35m" + getName() + "\u001B[0m" + ":\u001B[31m take this hit with my staff\u001B[0m \uD83E\uDE84");
             }
         } else if (this.mana > 2) {
             character.setHp(character.getHp()-this.intelligence/2);
             this.mana += 1;
-            System.out.println(getName()+ ":\u001B[31m get this rock!!\u001B[0m \uD83E\uDEA8 ");
+            System.out.println("\u001B[35m" + getName() + "\u001B[0m" + ":\u001B[31m get this rock!!\u001B[0m \uD83E\uDEA8 ");
         } else {
             this.mana += 2;
-            System.out.println(getName()+ ": \u001B[31m where are you? you can run but you can't hide!!\u001B[0m");
+            System.out.println("\u001B[35m" + getName() + "\u001B[0m" + ": \u001B[31m where are you? you can run but you can't hide!!\u001B[0m 😡");
         }
     }
 
