@@ -112,7 +112,7 @@ public class Main {
             Thread.sleep(500);
             player2.attack(player1);
             Thread.sleep(500);
-            System.out.println("\u001B[34m what a bloody round. It left our opponents with: \n" + player1.getName() + ":  " + player1.getHp() +
+            System.out.println("\u001B[34mwhat a bloody round. It left our opponents with: \n" + player1.getName() + ":  " + player1.getHp() +
                     "\n" + player2.getName() + ": " + player2.getHp() +"\u001B[0m " );
             System.out.println("\u001B[33m ===================================================== \u001B[0m");
 

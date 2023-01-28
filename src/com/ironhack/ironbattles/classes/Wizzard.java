@@ -29,7 +29,7 @@ public class Wizzard extends Character implements Attacker {
             System.out.println("\u001B[35m" + getName() + "\u001B[0m" + ":\u001B[31m get this rock!!\u001B[0m \uD83E\uDEA8 ");
         } else {
             this.mana += 2;
-            System.out.println("\u001B[35m" + getName() + "\u001B[0m" + ": \u001B[31m where are you? you can run but you can't hide!!\u001B[0m");
+            System.out.println("\u001B[35m" + getName() + "\u001B[0m" + ": \u001B[31m where are you? you can run but you can't hide!!\u001B[0m 😡");
         }
     }
 
